@@ -15,18 +15,17 @@ import org.jetbrains.anko.toast
 
 class MessageActivity : BaseActivity(), MessageView {
 
-    private var mPresent: MessagePresent? = null
+    lateinit var mPresent: MessagePresent
     override fun getContentViewLayoutId(): Int {
         return R.layout.activity_message
     }
 
     override fun initView(savedInstanceState: Bundle?) {
-//        mPresent = MessagePresentImpl(this)
-        mPresent = MessagePresentImpl()
+        mPresent = MessagePresentImpl(this)
+        mPresent.attachRecyclerView(rvList)
         srRefresh.setColorSchemeResources(R.color.colorAccent)
-        (mPresent as MessagePresentImpl).attachRecyclerView(rvList)
         srRefresh.onRefresh {
-            (mPresent as MessagePresentImpl).refresh()
+            mPresent.refresh()
         }
     }
 
@@ -60,11 +59,11 @@ class MessageActivity : BaseActivity(), MessageView {
 
     override fun onResume() {
         super.onResume()
-        mPresent!!.onStart()
+        mPresent.onStart()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        mPresent!!.onDestroy()
+        mPresent.onDestroy()
     }
 }
