@@ -1,9 +1,15 @@
 package com.example.basekotlindemo.mvp
 
 interface IBaseView {
-    abstract fun showProgressBar()
+    fun showProgressBar()
 
-    abstract fun hideProgressBar()
+    fun hideProgressBar()
 
-    abstract fun showMsg(var1: String)
+    fun showNetError()
+
+    fun showEmpty()
+
+    fun showMsg(var1: String)
+
+
 }

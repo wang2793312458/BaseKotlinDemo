@@ -1,5 +1,6 @@
 package com.example.basekotlindemo.common
 
+import com.example.basekotlindemo.message.entity.MessageData
 import io.reactivex.Observable
 import okhttp3.MultipartBody
 import okhttp3.ResponseBody
@@ -31,4 +32,8 @@ interface Api {
     // 获取验证码
     @POST("sys/getSMS")
     fun getCode(@Body map: Map<String, String>): Observable<Boolean>
+
+    //系统消息
+    @POST("push/findPushList")
+    fun getMessageList(@Body map: Map<String, String>): Observable<ArrayList<MessageData>>
 }
