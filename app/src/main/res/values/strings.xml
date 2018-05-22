@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BaseKotlinDemo</string>
+
+
+    <string name="empty_message">没有数据\n点击屏幕重试</string>
+    <string name="load_failed">加载失败\n点击屏幕重试</string>
+    <string name="net_error_message">网络错误\n点击屏幕重试</string>
+    <string name="loading_message">正在加载中…</string>
+    <string name="no_more_string">-The End-</string>
+
+    <string name="tips_get_success">获取成功</string>
+    <string name="tips_get_failed">获取失败</string>
+</resources>
