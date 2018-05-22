@@ -12,6 +12,7 @@ interface Api {
         const val API_DEFAULT_HOST = "http://39.104.75.162:8080/FireProtection/mobile/"
         const val API_LOAD_IMAGE = "http://39.104.75.162:8080/images/"
         const val API_UPLOAD_IMAGE = "http://39.104.75.162:8080/fileUpload/"
+        const val PAGE_SIZE = 20
     }
 
     // 上传文件

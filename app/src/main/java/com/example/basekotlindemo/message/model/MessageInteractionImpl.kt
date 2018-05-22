@@ -8,8 +8,6 @@ import com.example.basekotlindemo.mvp.IBaseInteraction.BaseListener
  * Created by bc_android on 2018/5/22.
  */
 class MessageInteractionImpl : MessageInteraction {
-
-
     override fun cancel(var1: Int) {
 
     }
@@ -24,14 +22,4 @@ class MessageInteractionImpl : MessageInteraction {
                     listener.error(it.message!!)
                 })
     }
-//    override fun getMessageList(userId: String, nowPage: Int, listener: MessagePresentImpl) {
-//        HttpFactory.getInstance()
-//                .getMessageList(mapOf("" to ""))
-//                .compose(HttpFactory.schedulers())
-//                .subscribe({
-//                    listener.success(it)
-//                }, {
-//                    listener.error(it.message!!)
-//                })
-//    }
 }
